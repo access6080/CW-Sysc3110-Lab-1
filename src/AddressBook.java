@@ -24,7 +24,12 @@ public class AddressBook extends BuddyInfo {
     public static void main(String[] args) {
         AddressBook book = new AddressBook();
         BuddyInfo homer = new BuddyInfo("Homer", "1900 Capwood", "123-456-7898");
+        BuddyInfo george = new BuddyInfo("George", "1234 Pine St", "123-496-7898");
+
         book.addBuddy(homer);
+        book.addBuddy(george);
+
         book.printAddressBook();
+        book.removeBuddy(homer);
     }
 }
