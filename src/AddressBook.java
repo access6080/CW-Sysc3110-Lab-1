@@ -15,6 +15,12 @@ public class AddressBook extends BuddyInfo {
         addressBook.remove(buddy);
     }
 
+    public void printBuddyNames(){
+        for (BuddyInfo buddy : addressBook){
+            System.out.println(buddy.getName());
+        }
+    }
+
     public void printAddressBook() {
         for (BuddyInfo record : addressBook){
             System.out.println(record.getName() + "\n" +  record.getAddress() + "\n" + record.getPhoneNumber());
@@ -31,5 +37,7 @@ public class AddressBook extends BuddyInfo {
 
         book.printAddressBook();
         book.removeBuddy(homer);
+
+        book.printBuddyNames();
     }
 }
